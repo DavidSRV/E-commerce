@@ -13,10 +13,11 @@
         display: flex;
         flex-direction: row;
         gap: 50px;
+        align-items: center;
 
         & .links {
             display: flex;
-            gap: 10px;
+            gap: 20px;
             margin-left: 10px;
     
             & a {
@@ -24,10 +25,13 @@
                 text-decoration: none;
                 color: co.$Darkgrayishblue;
                 font-weight: 500;
+                height: 70px;
+                translate: 0 35%;
 
     
                 &:hover {
-                    border-bottom: 2px solid orange;
+                    border-bottom: 4px solid orange;
+                    color: co.$Veryvarkblue;
                 }
             }
     
