@@ -1,5 +1,10 @@
-export default function Cart({children}){
+import Modal from "../modal/Modal";
+
+export default function Cart({children, modal}){
+
     return(
-        <div>{children}</div>
+        <div>{children}
+        <Modal modal={modal}/> 
+        </div>
     );
 }
