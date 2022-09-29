@@ -7,13 +7,13 @@ import "./_NavBar.scss";
 import { useState } from "react";
 
 export default function NavBar() {
-  const [modal, setModal] = useState("block");
+  const [modal, setModal] = useState("hidden");
 
   const openModal = () => {
     if (modal === "hidden") {
       setModal("block");
     } else {
-      setModal("block");
+      setModal("hidden");
     }
   };
 
