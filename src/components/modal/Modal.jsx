@@ -4,7 +4,7 @@ import trash from "../../assets/images/icon-delete.svg";
 
 export default function Modal({ modal }) {
   return (
-    <div className={`container-modal __${modal}`}>
+    <div id="modalcontainer" className={`container-modal __${modal}`}>
       <div className="title">
         <h2>Cart</h2>
       </div>

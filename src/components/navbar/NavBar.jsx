@@ -9,13 +9,15 @@ import { useState } from "react";
 export default function NavBar() {
   const [modal, setModal] = useState("hidden");
 
-  const openModal = () => {
-    if (modal === "hidden") {
-      setModal("block");
-    } else {
-      setModal("hidden");
+  window.addEventListener('click', function(e){   
+    if (document.getElementById('cart').contains(e.target)){
+      setModal("block")
+    } else if (document.getElementById('modalcontainer').contains(e.target)){
+      setModal("block")
+    } else{
+      setModal("hidden")
     }
-  };
+  });
 
   return (
     <header className="header-logo-links">
@@ -35,9 +37,9 @@ export default function NavBar() {
       </nav>
       <div className="container_cart_avatar">
         <Cart modal={modal}>
-          <img onClick={() => openModal()} className="cart" src={cart} alt="" />
+          <img id='cart' className="cart" src={cart} alt="" />
         </Cart>
-        <img className="avatar" src={avatar} alt="Img-User" />
+        <img className="avatar" src={avatar} alt="Img-User"/>
       </div>
     </header>
   );
