@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import cart from "../../assets/images/icon-cart.svg";
 import { avatar } from "../../utils/utils";
-import "./_NavBar.scss";
 import { useState } from "react";
+import './_NavBarStyle.scss'
 
 export default function NavBar() {
   const [modal, setModal] = useState("hidden");
