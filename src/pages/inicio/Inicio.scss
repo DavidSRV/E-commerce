@@ -1,7 +1,7 @@
     .inicio-container {
         display: grid;
         grid-area: center;
-        grid-template-columns: repeat(2, minmax(250px, 538px));
+        grid-template-columns: repeat(2, minmax(250px, 600px));
         margin: 0 20px;
 
         & .section1{

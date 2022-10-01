@@ -1,0 +1,61 @@
+@use '../../scss/co';
+
+.container-Card{
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+
+    & .section1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 300px;
+
+        & .title{
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: co.$Orange;
+            letter-spacing: 1.4px;
+        }
+
+        & h1{
+            font-size: 3rem;
+        }
+
+        & .parr{
+            margin-top: 20px;
+            line-height: 25px;
+            font-size: 1.1rem;
+            font-weight: 500;
+
+            color: co.$Darkgrayishblue;
+        }
+
+    }
+    .section2{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        & h3{
+            font-size: 1.7rem;
+        }
+
+        & p{
+            font-weight: 700;
+            color: co.$Orange;
+            background-color: co.$Paleorange;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+    }
+
+    & .oldprice{
+        color: co.$Grayishblue;
+        text-decoration: line-through;
+        font-weight: 700;
+        margin: 10px 0 30px;
+    }
+}
