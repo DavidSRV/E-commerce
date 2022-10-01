@@ -3,19 +3,29 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import cart from "../../assets/images/icon-cart.svg";
 import { avatar } from "../../utils/utils";
-import { useState } from "react";
-import './_NavBarStyle.scss'
+import { useEffect, useState } from "react";
+import "./_NavBarStyle.scss";
+import { useCount } from "../../context/CounterProvider";
 
 export default function NavBar() {
   const [modal, setModal] = useState("hidden");
+  const [popUp, setPopUp] = useState(0);
 
-  window.addEventListener('click', function(e){   
-    if (document.getElementById('cart').contains(e.target)){
-      setModal("block")
-    } else if (document.getElementById('modalcontainer').contains(e.target)){
-      setModal("block")
-    } else{
-      setModal("hidden")
+  // const {shopCount} = useCount();
+
+  // useEffect(()=>{
+  //   setPopUp(shopCount)
+  // })
+
+  console.log(popUp);
+
+  window.addEventListener("click", function (e) {
+    if (document.getElementById("cart").contains(e.target)) {
+      setModal("block");
+    } else if (document.getElementById("modalcontainer").contains(e.target)) {
+      setModal("block");
+    } else {
+      setModal("hidden");
     }
   });
 
@@ -37,9 +47,10 @@ export default function NavBar() {
       </nav>
       <div className="container_cart_avatar">
         <Cart modal={modal}>
-          <img id='cart' className="cart" src={cart} alt="" />
+          <img id="cart" className="cart" src={cart} alt="" />
         </Cart>
-        <img className="avatar" src={avatar} alt="Img-User"/>
+        <img className="avatar" src={avatar} alt="Img-User" />
+        <span className={`popUp __${"block"}`}>{popUp}</span>
       </div>
     </header>
   );

@@ -6,7 +6,7 @@ import cart from '../../../assets/images/icon-cart.svg'
 
 
 export default function Counter() {
-  let { count, setCount } = useCount();
+  let { count, setCount, setShopCount } = useCount();
 
   const minusCount = () => {
     count !== 0 ? setCount(count - 1) : setCount((count = 0));
@@ -16,6 +16,10 @@ export default function Counter() {
     setCount(count + 1);
   };
 
+  const setCart = () => {
+    setShopCount(count)
+  }
+
 
   return (
     <div className="container-count-cart">
@@ -24,7 +28,7 @@ export default function Counter() {
         <p>{count}</p>
         <img onClick={() => plusCount()} src={plus} alt="plus" />
       </div>
-      <div className="button-addtocart">
+      <div onClick={()=>setCart()} className="button-addtocart">
         <img src={cart} alt="shop" />
         <p>Add to cart</p>
       </div>

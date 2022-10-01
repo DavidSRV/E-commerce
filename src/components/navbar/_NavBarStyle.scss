@@ -59,7 +59,34 @@
                 border: 2px solid orange;
             }
         }
+
+        & .popUp{
+
+            position: absolute;
+            top: 40px;
+            background-color: co.$Orange;
+            color: co.$White;
+            font-weight: 500;
+            border-bottom-left-radius: 30%;
+            border-bottom-right-radius: 30%;
+            border-top-left-radius: 30%;
+            border-top-right-radius: 30%;
+            padding: 0 4px;
+            width: 15px;
+            font-size: 0.7rem;
+            
+            &.__block{
+                display: block;
+            }
+    
+            &.__hidden{
+                display: none;
+            }
          
+    }
+
+    
+
     }
     
 }
