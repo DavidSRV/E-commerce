@@ -1,0 +1,54 @@
+@use '../../../scss/co';
+
+.container-count-cart{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    & .counter{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 150px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: co.$Lightgrayishblue;
+        user-select: none;
+
+
+        & p{
+            font-weight: 700;
+        }
+
+
+        & img{
+            display: block;
+
+            &:hover{
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .button-addtocart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 280px;
+        background-color: co.$Orange;
+        border-radius: 10px;
+        color: co.$White;
+        font-weight: 700;
+        cursor: pointer;
+        user-select: none;
+        
+
+        & img{
+            filter: brightness(0) saturate(100%) invert(99%) sepia(78%) saturate(5%) hue-rotate(178deg) brightness(105%) contrast(100%);        }
+    }
+
+}
+

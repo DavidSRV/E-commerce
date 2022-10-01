@@ -1,4 +1,4 @@
-import Counter from "./Counter";
+import Counter from "./counter/Counter";
 import './_CardStyle.scss'
 
 export default function Card() {
