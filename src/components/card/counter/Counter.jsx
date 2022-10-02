@@ -4,7 +4,6 @@ import "./_CounterStyle.scss";
 import { useCount } from "../../../context/CounterProvider";
 import cart from '../../../assets/images/icon-cart.svg'
 
-
 export default function Counter() {
   let { count, setCount, setShopCount } = useCount();
 
@@ -19,7 +18,6 @@ export default function Counter() {
   const setCart = () => {
     setShopCount(count)
   }
-
 
   return (
     <div className="container-count-cart">

@@ -3,6 +3,8 @@ import shoes from "../../assets/images/image-product-1-thumbnail.jpg";
 import trash from "../../assets/images/icon-delete.svg";
 
 export default function Modal({ modal }) {
+
+
   return (
     <div id="modalcontainer" className={`container-modal __${modal}`}>
       <div className="title">
@@ -20,7 +22,7 @@ export default function Modal({ modal }) {
             <p className="title1">Fall Limited Edition Sneakers</p>
             <p className="title2">
               {`${"$120"}.00 x ${"3"}`}
-              <strong style={{ color: "black" }}>{`  $${120*3}.00`}</strong>
+              <strong style={{ color: "black" }}>{` $${120*3}.00`}</strong>
             </p>
           </div>
           <span>

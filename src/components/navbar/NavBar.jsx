@@ -11,23 +11,26 @@ export default function NavBar() {
   const [modal, setModal] = useState("hidden");
   const [popUp, setPopUp] = useState(0);
 
-  // const {shopCount} = useCount();
+  const { shopCount} = useCount();
 
-  // useEffect(()=>{
-  //   setPopUp(shopCount)
-  // })
+  useEffect(() => {
+    setPopUp(shopCount);
+  }, [shopCount]);
 
-  console.log(popUp);
 
-  window.addEventListener("click", function (e) {
-    if (document.getElementById("cart").contains(e.target)) {
-      setModal("block");
-    } else if (document.getElementById("modalcontainer").contains(e.target)) {
-      setModal("block");
-    } else {
-      setModal("hidden");
-    }
-  });
+
+
+  useEffect(() => {
+    window.addEventListener("click", function (e) {
+      if (document.getElementById("cart").contains(e.target)) {
+        setModal("block");
+      } else if (document.getElementById("modalcontainer").contains(e.target)) {
+        setModal("block");
+      } else {
+        setModal("hidden");
+      }
+    });
+  }, []);
 
   return (
     <header className="header-logo-links">
@@ -50,7 +53,9 @@ export default function NavBar() {
           <img id="cart" className="cart" src={cart} alt="" />
         </Cart>
         <img className="avatar" src={avatar} alt="Img-User" />
-        <span className={`popUp __${"block"}`}>{popUp}</span>
+        <span className={`popUp __${popUp === 0 ? "hidden" : "block"}`}>
+          {null}
+        </span>
       </div>
     </header>
   );
