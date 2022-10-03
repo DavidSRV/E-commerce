@@ -5,7 +5,6 @@ const Count = createContext("");
 export default function CountProvider({ children }) {
   const [count, setCount] = useState(0);
   const [shopCount, setShopCount] = useState(0);
-//   const [countShoes, SetCountShoes] = useState(0)
 
   return (
     <Count.Provider
@@ -14,8 +13,6 @@ export default function CountProvider({ children }) {
         setCount,
         shopCount,
         setShopCount,
-        // countShoes,
-        // SetCountShoes
       }}
     >
       {children}

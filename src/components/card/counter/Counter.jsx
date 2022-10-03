@@ -5,18 +5,19 @@ import { useCount } from "../../../context/CounterProvider";
 import cart from '../../../assets/images/icon-cart.svg'
 
 export default function Counter() {
-  let { count, setCount, setShopCount } = useCount();
+  let { count, setCount, setShopCount} = useCount();
 
   const minusCount = () => {
     count !== 0 ? setCount(count - 1) : setCount((count = 0));
   };
   
   const plusCount = () => {
-    setCount(count + 1);
+    setCount( count + 1);
   };
 
   const setCart = () => {
     setShopCount(count)
+    setCount(0)
   }
 
   return (

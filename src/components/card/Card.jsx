@@ -18,7 +18,7 @@ export default function Card() {
         <p>50%</p>
       </div>
       <div className="oldprice">$250.00</div>
-    <Counter/>
+    <Counter />
     </div>
     
   );
