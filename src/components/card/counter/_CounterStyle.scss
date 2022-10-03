@@ -1,11 +1,11 @@
 @use '../../../scss/co';
 
-.container-count-cart{
+.container-count-cart {
     display: flex;
     flex-direction: row;
     gap: 20px;
 
-    & .counter{
+    & .counter {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -15,24 +15,22 @@
         background-color: co.$Lightgrayishblue;
         user-select: none;
 
-
-        & p{
+        & p {
             font-weight: 700;
         }
 
 
-        & img{
+        & img {
             display: block;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
             }
-
         }
 
     }
 
-    .button-addtocart{
+    .button-addtocart {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -44,11 +42,10 @@
         font-weight: 700;
         cursor: pointer;
         user-select: none;
-        
 
-        & img{
-            filter: brightness(0) saturate(100%) invert(99%) sepia(78%) saturate(5%) hue-rotate(178deg) brightness(105%) contrast(100%);        }
+        & img {
+            filter: brightness(0) saturate(100%) invert(99%) sepia(78%) saturate(5%) hue-rotate(178deg) brightness(105%) contrast(100%);
+        }
     }
 
 }
-

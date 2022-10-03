@@ -10,13 +10,8 @@ import { useCount } from "../../context/CounterProvider";
 export default function NavBar() {
 
   const [modal, setModal] = useState("hidden");
-  const [popUp, setPopUp] = useState(0);
 
-  const { shopCount } = useCount();
-
-  useEffect(() => {
-    setPopUp(item => item + shopCount);
-  }, [shopCount]);
+  const { count } = useCount();
 
   let modalShow = useRef(null);
 
@@ -53,9 +48,10 @@ export default function NavBar() {
           <img ref={modalShow} className="cart" src={cart} alt="" />
         </Cart>
         <img className="avatar" src={avatar} alt="Img-User" />
-        <span className={`popUp __${popUp === 0 ? "hidden" : "block"}`}>
-          {popUp}
-        </span>
+        {count && <span className="popUp __block">
+          {count}
+        </span>}
+
       </div>
     </header>
   );
