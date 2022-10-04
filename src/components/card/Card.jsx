@@ -4,7 +4,7 @@ import './_CardStyle.scss'
 export default function Card() {
   return (
     <div className="container-Card">
-      <div className="section1">
+      <div className="section1-card">
         <p className="title">SNEAKER COMPANY</p>
         <h1>Fall Limited Edition Sneakers</h1>
         <p className="parr">
@@ -13,7 +13,7 @@ export default function Card() {
           the weather can offer
         </p>
       </div>
-      <div className="section2">
+      <div className="section2-card">
         <h3>$125.00</h3>
         <p>50%</p>
       </div>

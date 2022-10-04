@@ -7,7 +7,7 @@
     justify-content: center;
     height: 600px;
 
-    & .section1{
+    & .section1-card{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -21,7 +21,7 @@
         }
 
         & h1{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
         & .parr{
@@ -34,7 +34,7 @@
         }
 
     }
-    .section2{
+    .section2-card{
         display: flex;
         gap: 10px;
         align-items: center;

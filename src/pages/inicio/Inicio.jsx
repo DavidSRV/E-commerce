@@ -1,4 +1,5 @@
 import Card from "../../components/card/Card";
+import Slider from "../../components/slider/Slider";
 import "./Inicio.scss";
 
 export default function Inicio() {
@@ -7,7 +8,9 @@ export default function Inicio() {
       <section className="section1">
         <Card />
       </section>
-      <section className="section2"></section>
+      <section className="section2">
+        <Slider/>
+      </section>
     </main>
   );
 }

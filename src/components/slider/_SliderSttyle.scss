@@ -1,0 +1,20 @@
+.container-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & .img-principal{
+
+        grid-column: span 4;
+        
+        & .img{
+            width: 450px;
+            display: block;
+            border-radius: 10px;
+        }
+
+
+    }
+
+}
