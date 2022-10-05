@@ -11,9 +11,7 @@ import img4 from "../assets/images/image-product-4.jpg";
 
 export const avatar = img;
 
-export const sliderImgProducts = [
-  {
-    GrupImg: [img1,img2,img3,img4],
-    GroupThumabil: [thumbnail1,thumbnail2,thumbnail3,thumbnail4],
-  },
-];
+export const sliderImgProducts = {
+    GroupImg: [img1,img2,img3,img4],
+    GroupThumbail: [thumbnail1,thumbnail2,thumbnail3,thumbnail4],
+  };

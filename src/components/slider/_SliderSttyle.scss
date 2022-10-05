@@ -1,20 +1,44 @@
-.container-slide{
+@use '../../scss/co';
+
+.container-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 
-    & .img-principal{
+    & .cotainer-imgPrincipal {
+        margin-top: 80px;
+        flex: 1;
 
-        grid-column: span 4;
-        
-        & .img{
-            width: 450px;
-            display: block;
+        & .imgPricipal {
+            width: 420px;
             border-radius: 10px;
         }
 
+    }
+
+    & .container-thumbail {
+
+        display: flex;
+        gap: 20px;
+
+        & .imgThumbail {
+            width: 90px;
+            outline: 3px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+
+
+            &:hover {
+                outline: 3px solid co.$Orange;
+                filter: opacity(50%);
+
+            }
+        }
 
     }
+
+
 
 }
