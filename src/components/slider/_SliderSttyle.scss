@@ -15,7 +15,6 @@
             width: 420px;
             border-radius: 10px;
         }
-
     }
 
     & .container-thumbail {
@@ -29,16 +28,10 @@
             border-radius: 10px;
             cursor: pointer;
 
-
             &:hover {
                 outline: 3px solid co.$Orange;
                 filter: opacity(50%);
-
             }
         }
-
     }
-
-
-
 }
