@@ -30,7 +30,7 @@ export default function NavBar() {
     <header className="header-logo-links">
       <nav className="container-nav">
         <div className="logo">
-          <Link to="/">
+          <Link to="/E-commerce">
             <img src={logo} alt="Logo-Sneakers" />
           </Link>
         </div>
