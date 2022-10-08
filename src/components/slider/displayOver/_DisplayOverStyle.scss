@@ -1,0 +1,115 @@
+@use '../../../scss/co';
+
+@mixin styleArrows {
+    background-color: co.$White;
+    border-radius: 50%;
+
+}
+
+.displayOver-Window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 0.746);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    & .__hidden {
+        display: none;
+    }
+
+    & .container-displayOver {
+
+        & .imgPrinicipal-Over {
+            width: 480px;
+            border-radius: 10px;
+        }
+
+        & .container-close {
+            position: relative;
+            left: 460px;
+            bottom: 10px;
+            width: 50px;
+
+            & .close {
+                width: 20px;
+                filter: sepia(100%) brightness(200%) saturate(42%);
+                -webkit-filter: sepia(100%) brightness(200%) saturate(42%);
+                -moz-filter: sepia(100%) brightness(200%) saturate(42%);
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                    user-select: none;
+                }
+            }
+        }
+
+        & .container-arrowRigth {
+
+            position: absolute;
+            top: 45%;
+            right: 33.7%;
+            background-color: co.$White;
+            padding: 12px 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                user-select: none;
+            }
+
+        }
+
+        & .container-arrowLeft {
+            position: absolute;
+            top: 45%;
+            right: 63.6%;
+            background-color: co.$White;
+            padding: 12px 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                user-select: none;
+            }
+
+        }
+
+    }
+
+    & .container-thumabail-Over {
+        display: flex;
+        gap: 30px;
+
+        & .imgThumbail {
+            margin-top: 20px;
+            width: 80px;
+            border-radius: 10px;
+            cursor: pointer;
+            outline: 3px solid transparent;
+
+            &:hover {
+                outline: 3px solid co.$Orange;
+                filter: opacity(60%);
+            }
+        }
+
+    }
+
+}

@@ -1,15 +1,20 @@
 import { createContext, useContext, useState } from "react";
+import { sliderImgProducts } from '../utils/utils'
 
 const Count = createContext("");
 
 export default function CountProvider({ children }) {
   const [count, setCount] = useState(null);
+  const [productImg, setProductImg] = useState(sliderImgProducts);
+  
 
   return (
     <Count.Provider
       value={{
         count,
-        setCount
+        setCount, 
+        productImg,
+        setProductImg
       }}
     >
       {children}

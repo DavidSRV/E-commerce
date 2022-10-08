@@ -6,12 +6,10 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    z-index: -10;
 
 
-    & .cotainer-imgPrincipal{
+    & .cotainer-imgPrincipal {
         margin-top: 80px;
-        flex: 1;
 
         & .imgPricipal {
             width: 420px;
@@ -24,7 +22,6 @@
 
         display: flex;
         gap: 20px;
-        z-index: -1;
 
         & .imgThumbail {
             width: 90px;
@@ -34,15 +31,31 @@
 
             &:hover {
                 outline: 3px solid co.$Orange;
-                filter: opacity(50%);
+                filter: opacity(60%);
             }
         }
     }
 
-    & .container-displayOver::after{
+    & .container-displayOver {
+        position: absolute;
+        left: 35%;
         display: grid;
         place-content: center;
-        z-index: 1000;
-    }
 
+        & .container-imgPrincipal {
+
+            & .imgPrincipal {
+                width: 500px;
+                border-radius: 10px;
+            }
+
+        }
+
+        & .container-thumbail {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+    }
 }
