@@ -6,7 +6,7 @@ export default function EmptyPage() {
     <div className="container-emptyPage">
       <div className="emptyPage">
         <h1>This site is under construction!!</h1>
-        <Link to="/">
+        <Link to="/E-commerce">
           <button>Back to home</button>
         </Link>
       </div>
