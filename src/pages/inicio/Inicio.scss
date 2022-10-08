@@ -1,20 +1,25 @@
-    .inicio-container {
+@use '../../scss/MainStyle.scss';
+
+.inicio-container {
+
+    @include MainStyle.for-size(small) {
         display: grid;
         grid-area: center;
         grid-template-columns: repeat(2, minmax(250px, 600px));
         margin: 0 20px;
-
-        & .section1{
-            grid-column: 2;
-        }
-
-        & .section2{
-            grid-column: 1;
-            grid-row: 1;
-            
-            display: grid;
-            place-content: center;
-        }
-
-        
     }
+
+    & .section1 {
+        grid-column: 2;
+    }
+
+    & .section2 {
+        grid-column: 1;
+        grid-row: 1;
+
+        display: grid;
+        place-content: center;
+    }
+
+
+}

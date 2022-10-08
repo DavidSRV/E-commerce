@@ -6,7 +6,6 @@ import Collection from "./pages/others/Collections";
 import Contact from "./pages/others/Contact";
 import Men from "./pages/others/Men";
 import Women from "./pages/others/Women";
-import "./_AppStyle.scss";
 
 function App() {
   return (

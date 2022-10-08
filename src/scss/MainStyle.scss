@@ -1,5 +1,44 @@
 @use './resets';
 
+$small: 'small';
+$medium: 'medium';
+$large: 'large';
+
+$screen-small-min: 768px;
+$screen-medium-min: 1024px;
+$screen-large-min: 1440px;
+
+@mixin for-size($size) {
+  @if $size == $small {
+    @media (min-width: $screen-small-min) {
+      @content;
+    }
+  } @else if $size == $medium {
+    @media (min-width: $screen-medium-min) {
+      @content;
+    }
+  } @else if $size == $large {
+    @media (min-width: $screen-large-min) {
+      @content;
+    }
+  }
+}
+
+@mixin for-custom-size($screen, $is-min-width: true) {
+  $prefix: if($is-min-width, 'min', 'max');
+
+  @media (#{$prefix}-width: #{$screen}) {
+    @content;
+  }
+}
+
+@mixin for-custom-size-range($screen-min, $screen-max) {
+  @media (min-width: #{$screen-min}) and (max-width: #{$screen-max}) {
+    @content;
+  }
+}
+
+
 body{
     display: flex;
     align-items: center;
