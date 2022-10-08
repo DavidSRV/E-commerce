@@ -1,0 +1,34 @@
+@use '../../scss/co';
+
+.container-emptyPage {
+
+    max-width: 1240px;
+
+    & .emptyPage{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 220px;
+        padding: 100px;
+        
+        & button {
+            cursor: pointer;
+            margin: 15px 20px;
+            width: 310px;
+            height: 55px;
+            background-color: co.$Orange;
+            color: co.$Lightgrayishblue;
+            font-weight: 700;
+            border-radius: 10px;
+            border: none;
+    
+            &:hover{
+                background-color: co.$OrangeSelect;
+    
+            }
+        }
+    }
+
+
+}

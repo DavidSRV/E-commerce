@@ -8,7 +8,6 @@ import "./_NavBarStyle.scss";
 import { useCount } from "../../context/CounterProvider";
 
 export default function NavBar() {
-
   const [modal, setModal] = useState("hidden");
 
   const { count } = useCount();
@@ -44,15 +43,13 @@ export default function NavBar() {
         </div>
       </nav>
       <div className="container_cart_avatar">
+      {count > 0 && <div className="popUp">{count}</div>}
         <Cart modal={modal}>
           <img ref={modalShow} className="cart" src={cart} alt="" />
         </Cart>
         <img className="avatar" src={avatar} alt="Img-User" />
-        {count && <span className="popUp __block">
-          {count}
-        </span>}
-
       </div>
     </header>
+
   );
 }

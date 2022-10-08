@@ -5,8 +5,7 @@ import arrowLeft from "../../../assets/images/icon-previous.svg";
 import arrowRigth from "../../../assets/images/icon-next.svg";
 import close from "../../../assets/images/icon-close.svg";
 
-export default function DisplayOver({Over}) {
-
+export default function DisplayOver({ Over }) {
   const [imgPrincipal, setImgPrincipal] = useState(0);
 
   const { productImg } = useCount();
@@ -26,9 +25,8 @@ export default function DisplayOver({Over}) {
   ));
 
   return (
-    <div className="displayOver-Window" >
+    <div className="displayOver-Window">
       <div className="container-displayOver">
-
         <div className="container-close">
           <img onClick={Over} className="close" src={close} alt="close" />
         </div>
@@ -39,16 +37,19 @@ export default function DisplayOver({Over}) {
           alt="imgPrincipal-Over"
         />
 
-        <span onClick={() => setImgPrincipal(img => (img === 3 ? 0 : img + 1)
-  )} className="container-arrowRigth">
+        <span
+          onClick={() => setImgPrincipal((img) => (img === 3 ? 0 : img + 1))}
+          className="container-arrowRigth"
+        >
           <img className="arrowRigth" src={arrowRigth} alt="arrowRigth" />
         </span>
 
-        <span onClick={() => setImgPrincipal(img => (img === 0 ? 3 : img - 1)
-  )} className="container-arrowLeft">
+        <span
+          onClick={() => setImgPrincipal((img) => (img === 0 ? 3 : img - 1))}
+          className="container-arrowLeft"
+        >
           <img className="arrowLeft" src={arrowLeft} alt="arrowLeft" />
         </span>
-
       </div>
 
       <div className="container-thumabail-Over">{overlaythumabilImg}</div>

@@ -25,6 +25,8 @@
 
     & .container-displayOver {
 
+        position: relative;
+
         & .imgPrinicipal-Over {
             width: 480px;
             border-radius: 10px;
@@ -46,6 +48,8 @@
                 &:hover {
                     transform: scale(1.1);
                     user-select: none;
+                    filter: invert(64%) sepia(61%) saturate(4127%) hue-rotate(347deg) brightness(102%) contrast(101%);
+
                 }
             }
         }
@@ -54,7 +58,7 @@
 
             position: absolute;
             top: 45%;
-            right: 33.7%;
+            right: -20px;
             background-color: co.$White;
             padding: 12px 15px;
             border-radius: 50%;
@@ -69,12 +73,16 @@
                 user-select: none;
             }
 
+            & .arrowRigth:hover {
+                filter: invert(64%) sepia(61%) saturate(4127%) hue-rotate(347deg) brightness(102%) contrast(101%);
+            }
+
         }
 
         & .container-arrowLeft {
             position: absolute;
             top: 45%;
-            right: 63.6%;
+            left: -20px;
             background-color: co.$White;
             padding: 12px 15px;
             border-radius: 50%;
@@ -83,6 +91,10 @@
             justify-content: center;
             align-self: center;
             cursor: pointer;
+
+            & .arrowLeft:hover {
+                filter: invert(64%) sepia(61%) saturate(4127%) hue-rotate(347deg) brightness(102%) contrast(101%);
+            }
 
             &:hover {
                 transform: scale(1.1);

@@ -1,7 +1,7 @@
 @use '../../scss/co';
 
 .header-logo-links {
-    width: 80vw;
+    max-width: 1440px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,9 +39,26 @@
     }
 
     & .container_cart_avatar {
+        position: relative;
         display: flex;
         align-items: center;
         gap: 50px;
+
+        & .popUp {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: co.$Orange;
+            color: co.$White;
+            font-weight: 500;
+            padding: 0 4px;
+            width: 15px;
+            font-size: 0.7rem;
+            display: grid;
+            place-content: center;
+            padding: 0 10px;
+            border-radius: 60%;
+        }
 
         & .cart {
             &:hover {
@@ -59,24 +76,7 @@
                 border: 2px solid orange;
             }
         }
-
-        & .popUp {
-            display: block;
-            position: absolute;
-            top: 40px;
-            background-color: co.$Orange;
-            color: co.$White;
-            font-weight: 500;
-            border-bottom-left-radius: 30%;
-            border-bottom-right-radius: 30%;
-            border-top-left-radius: 30%;
-            border-top-right-radius: 30%;
-            padding: 0 4px;
-            width: 15px;
-            font-size: 0.7rem;
-
-        }
-
     }
 
 }
+

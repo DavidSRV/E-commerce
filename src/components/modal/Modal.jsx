@@ -43,7 +43,7 @@ export default function Modal({ modal, modalContainer }) {
             />
           </span>
         </div>
-        <button className="cheackout">Checkout</button>
+        <button onClick={() => setCount(null)} className="cheackout">Checkout</button>
       </div>
     </div>
   );

@@ -1,1 +1,9 @@
-export default function Contact() {return(<></>);}
+import EmptyPage from "../../components/emptyPage/EmptyPage";
+
+export default function Contact() {
+  return (
+    <>
+      <EmptyPage />
+    </>
+  );
+}

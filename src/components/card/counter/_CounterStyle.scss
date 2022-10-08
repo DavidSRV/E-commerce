@@ -43,6 +43,11 @@
         cursor: pointer;
         user-select: none;
 
+        &:hover{
+            background-color: co.$OrangeSelect;
+
+        }
+
         & img {
             filter: brightness(0) saturate(100%) invert(99%) sepia(78%) saturate(5%) hue-rotate(178deg) brightness(105%) contrast(100%);
         }
