@@ -1,6 +1,7 @@
 @use '../../scss/co';
 @use '../../scss/MainStyle.scss';
 
+
 .container-slide {
     display: flex;
     flex-direction: column;
@@ -9,10 +10,62 @@
     gap: 20px;
 
     @include MainStyle.for-size(small) {
-        background-image: url('../../assets/images/image-product-1.jpg');
-        background-position: center;
-        background-size: cover;
         
+        & .mobileImg{
+            width: 100%;
+            height: 310px;
+            object-fit: cover;
+        }
+
+        & .arrowRigth {
+            position: absolute;
+            top: 25%;
+            right: 5%;
+            background-color: co.$White;
+            padding: 12px 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            cursor: pointer;
+
+
+            &:hover {
+                transform: scale(1.1);
+                user-select: none;
+            }
+
+            & .arrowRigth:hover {
+                filter: invert(64%) sepia(61%) saturate(4127%) hue-rotate(347deg) brightness(102%) contrast(101%);
+            }
+
+        }
+
+        & .arrowLeft {
+
+            position: absolute;
+            top: 25%;
+            right: 85%;
+            background-color: co.$White;
+            padding: 12px 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                user-select: none;
+            }
+
+            & .arrowRigth:hover {
+                filter: invert(64%) sepia(61%) saturate(4127%) hue-rotate(347deg) brightness(102%) contrast(101%);
+            }
+
+        }
     }
 
 

@@ -1,5 +1,5 @@
 {
-  "homepage":"https://DavidSRV/E-commerce",
+  "homepage": "https://DavidSRV/E-commerce",
   "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +10,7 @@
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive": "^9.0.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
     "sass": "^1.55.0",

@@ -16,7 +16,9 @@ export default function Modal({ modal, modalContainer }) {
         <h2>Cart</h2>
       </div>
 
-      <div className={`container-empty __${count === null ? "block" : "hidden"}`}>
+      <div
+        className={`container-empty __${count === null ? "block" : "hidden"}`}
+      >
         <div className="empty-support">
           <p className={`empty `}>Your cart is empty.</p>
         </div>
@@ -43,7 +45,9 @@ export default function Modal({ modal, modalContainer }) {
             />
           </span>
         </div>
-        <button onClick={() => setCount(null)} className="cheackout">Checkout</button>
+        <button onClick={() => setCount(null)} className="cheackout">
+          Checkout
+        </button>
       </div>
     </div>
   );

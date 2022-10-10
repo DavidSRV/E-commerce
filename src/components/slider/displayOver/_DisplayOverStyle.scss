@@ -3,7 +3,6 @@
 @mixin styleArrows {
     background-color: co.$White;
     border-radius: 50%;
-
 }
 
 .displayOver-Window {
@@ -18,6 +17,7 @@
     align-items: center;
     justify-content: center;
     user-select: none;
+    z-index: 10;
 
     & .__hidden {
         display: none;
