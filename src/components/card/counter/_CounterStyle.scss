@@ -1,9 +1,17 @@
 @use '../../../scss/co';
+@use '../../../scss/MainStyle.scss';
+
 
 .container-count-cart {
     display: flex;
     flex-direction: row;
     gap: 20px;
+
+    @include MainStyle.for-size(small){
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
 
     & .counter {
         display: flex;
@@ -15,10 +23,13 @@
         background-color: co.$Lightgrayishblue;
         user-select: none;
 
+        @include MainStyle.for-size(small){
+           width: 23rem;
+        }
+    
         & p {
             font-weight: 700;
         }
-
 
         & img {
             display: block;
@@ -42,6 +53,12 @@
         font-weight: 700;
         cursor: pointer;
         user-select: none;
+
+        @include MainStyle.for-size(small){
+            width: 23rem;
+            height: 60px;
+         }
+     
 
         &:hover{
             background-color: co.$OrangeSelect;

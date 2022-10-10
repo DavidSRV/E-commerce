@@ -2,23 +2,32 @@
 
 .inicio-container {
 
+    display: grid;
+    grid-area: center;
+    grid-template-columns: repeat(2, minmax(250px, 600px));
+    margin: 0 20px;
+
     @include MainStyle.for-size(small) {
         display: grid;
-        grid-area: center;
-        grid-template-columns: repeat(2, minmax(250px, 600px));
-        margin: 0 20px;
+        grid-template-columns: inherit;
+        grid-template-rows: 2;
+        margin: inherit;
     }
 
     & .section1 {
         grid-column: 2;
+
+        @include MainStyle.for-size(small) {
+            grid-column: 1;
+        }
     }
 
     & .section2 {
+        display: grid;
         grid-column: 1;
         grid-row: 1;
-
-        display: grid;
-        place-content: center;
+        height: 300px;
+    
     }
 
 

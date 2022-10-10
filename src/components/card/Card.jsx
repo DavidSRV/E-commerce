@@ -14,10 +14,13 @@ export default function Card() {
         </p>
       </div>
       <div className="section2-card">
+        <div className="card">
         <h3>$125.00</h3>
         <p>50%</p>
+        </div>
+        
+        <div className="oldprice">$250.00</div>
       </div>
-      <div className="oldprice">$250.00</div>
     <Counter />
     </div>
     

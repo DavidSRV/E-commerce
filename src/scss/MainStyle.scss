@@ -4,21 +4,21 @@ $small: 'small';
 $medium: 'medium';
 $large: 'large';
 
-$screen-small-min: 768px;
+$screen-small-min: 800px;
 $screen-medium-min: 1024px;
 $screen-large-min: 1440px;
 
 @mixin for-size($size) {
   @if $size == $small {
-    @media (min-width: $screen-small-min) {
+    @media (max-width: $screen-small-min) {
       @content;
     }
   } @else if $size == $medium {
-    @media (min-width: $screen-medium-min) {
+    @media (max-width: $screen-medium-min) {
       @content;
     }
   } @else if $size == $large {
-    @media (min-width: $screen-large-min) {
+    @media (max-width: $screen-large-min) {
       @content;
     }
   }

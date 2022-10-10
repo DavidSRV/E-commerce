@@ -1,30 +1,53 @@
 @use '../../scss/co';
+@use '../../scss/MainStyle.scss';
 
-.container-Card{
+
+.container-Card {
     margin: 0 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 600px;
 
-    & .section1-card{
+    @include MainStyle.for-size(small) {
+        display: flex;
+        margin: inherit;
+        height: 465px;
+    }
+
+    & .section1-card {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         height: 300px;
 
-        & .title{
+        @include MainStyle.for-size(small) {
+            display: inherit;
+            justify-content: inherit;
+            padding: 10px;
+        }
+
+        & .title {
             font-size: 0.8rem;
             font-weight: 700;
             color: co.$Orange;
             letter-spacing: 1.4px;
+
+            @include MainStyle.for-size(small) {
+                margin: 0 0 10px 0;
+            }
+
         }
 
-        & h1{
+        & h1 {
             font-size: 2.5rem;
+
+            @include MainStyle.for-size(small) {
+                font-size: 1.9rem;
+            }
         }
 
-        & .parr{
+        & .parr {
             margin-top: 20px;
             line-height: 25px;
             font-size: 1.1rem;
@@ -34,28 +57,49 @@
         }
 
     }
-    .section2-card{
+
+    .section2-card {
+
         display: flex;
-        gap: 10px;
-        align-items: center;
+        flex-direction: column;
 
-        & h3{
-            font-size: 1.7rem;
+        @include MainStyle.for-size(small) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 15px 15px;
+
         }
 
-        & p{
-            font-weight: 700;
-            color: co.$Orange;
-            background-color: co.$Paleorange;
-            padding: 2px 5px;
-            border-radius: 5px;
+        & .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+
+            & h3 {
+                font-size: 1.7rem;
+            }
+
+            & p {
+                font-weight: 700;
+                color: co.$Orange;
+                background-color: co.$Paleorange;
+                padding: 2px 5px;
+                border-radius: 5px;
+            }
         }
+
     }
 
-    & .oldprice{
+    & .oldprice {
         color: co.$Grayishblue;
         text-decoration: line-through;
         font-weight: 700;
         margin: 10px 0 30px;
+
+        @include MainStyle.for-size(small) {
+            margin: unset;
+        }
     }
 }

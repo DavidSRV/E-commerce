@@ -1,4 +1,5 @@
 @use '../../scss/co';
+@use '../../scss/MainStyle.scss';
 
 .container-slide {
     display: flex;
@@ -7,14 +8,32 @@
     align-items: center;
     gap: 20px;
 
+    @include MainStyle.for-size(small) {
+        background-image: url('../../assets/images/image-product-1.jpg');
+        background-position: center;
+        background-size: cover;
+        
+    }
+
 
     & .cotainer-imgPrincipal {
         margin-top: 80px;
 
+        @include MainStyle.for-size(small) {
+            margin: inherit;
+        }
+
         & .imgPricipal {
+
             width: 420px;
             border-radius: 10px;
             cursor: pointer;
+
+            @include MainStyle.for-size(small) {
+                width: 400px;
+                display: none;
+            }
+
         }
     }
 
@@ -22,6 +41,10 @@
 
         display: flex;
         gap: 20px;
+
+        @include MainStyle.for-size(small) {
+            display: none;
+        }
 
         & .imgThumbail {
             width: 90px;
