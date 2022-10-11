@@ -1,4 +1,5 @@
 @use '../../scss/co';
+@use '../../scss/MainStyle.scss';
 
 .container-emptyPage {
 
@@ -11,6 +12,18 @@
         justify-content: center;
         gap: 220px;
         padding: 100px;
+
+        @include MainStyle.for-size(small) {
+            flex-direction: column;
+            padding: 0;
+            gap: 150px;
+
+            & h1{
+                text-align: center;
+                margin-top: 100px;
+            }
+        }
+
         
         & button {
             cursor: pointer;

@@ -1,0 +1,24 @@
+@use '../../../scss/co';
+
+.box{
+    & .links{
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        & .button{
+            margin-bottom: 20px;
+
+        }
+
+        & a{
+            display: block;
+            text-decoration: none;
+            color: co.$Black;
+            margin: 15px;
+            font-weight: 800;
+        }
+
+    }
+}

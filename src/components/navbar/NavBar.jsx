@@ -6,6 +6,8 @@ import { avatar } from "../../utils/utils";
 import { useEffect, useState, useRef } from "react";
 import "./_NavBarStyle.scss";
 import { useCount } from "../../context/CounterProvider";
+import { useMediaQuery } from "react-responsive";
+import MobileNavBar from "./mobileNavBar/MobileNavBar";
 
 export default function NavBar() {
   const [modal, setModal] = useState("hidden");
@@ -26,9 +28,18 @@ export default function NavBar() {
     });
   });
 
+  let Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ query: "(max-width:800px)" });
+    return isMobile ? children : null;
+  };
+
   return (
     <header className="header-logo-links">
       <nav className="container-nav">
+        <Mobile>
+          <MobileNavBar />
+        </Mobile>
+
         <div className="logo">
           <Link to="/E-commerce">
             <img src={logo} alt="Logo-Sneakers" />
@@ -43,13 +54,12 @@ export default function NavBar() {
         </div>
       </nav>
       <div className="container_cart_avatar">
-      {count > 0 && <div className="popUp">{count}</div>}
+        {count > 0 && <div className="popUp">{count}</div>}
         <Cart modal={modal}>
           <img ref={modalShow} className="cart" src={cart} alt="" />
         </Cart>
         <img className="avatar" src={avatar} alt="Img-User" />
       </div>
     </header>
-
   );
 }
