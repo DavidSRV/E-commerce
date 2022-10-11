@@ -9,6 +9,7 @@
     align-items: center;
     gap: 20px;
 
+
     @include MainStyle.for-size(small) {
         
         & .mobileImg{
@@ -72,12 +73,12 @@
     & .cotainer-imgPrincipal {
         margin-top: 80px;
 
+
         @include MainStyle.for-size(small) {
             margin: inherit;
         }
 
         & .imgPricipal {
-
             width: 420px;
             border-radius: 10px;
             cursor: pointer;
@@ -106,6 +107,7 @@
             cursor: pointer;
 
             &:hover {
+                transition: all 0.5s;
                 outline: 3px solid co.$Orange;
                 filter: opacity(60%);
             }
